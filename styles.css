@@ -6,30 +6,41 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack header, content, and footer vertically */
   height: 100vh; /* Full screen height */
 }
 
 header, footer {
-  background-color: #333;
-  color: #fff;
   text-align: center;
-  padding: 1rem;
+  color: black;
+  background-color: hsl(300, 100%, 93%);
+  border: 1px dotted hsl(280, 100%, 70%);
 }
 
 .content {
   display: flex; /* Arrange sidebars and main content in a row */
-  flex: 1; /* Makes the content area grow to fill the remaining space */
+  flex: 1; /* Take up all remaining vertical space */
 }
 
 .sidebar {
-  background-color: #ddd;
-  padding: 1rem;
   flex: 0 0 100px; /* Fixed width for sidebars */
+  background-color: hsl(200, 100%, 90%);
+  border: 1px dotted hsl(200, 100%, 80%);
 }
 
 main {
-  background-color: #f4f4f4;
   flex: 1; /* Flexible area that takes up the remaining space */
-  padding: 1rem;
+  background-color: hsl(113, 85%, 95%);
+  border: 1px dotted hsl(84, 71%, 53%);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column; /* Stack everything in one column */
+  }
+
+  .sidebar {
+      display: none; /* Hide sidebars */
+  }
 }
