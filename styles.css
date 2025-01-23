@@ -13,6 +13,7 @@ body {
 header, footer {
   text-align: center;
   color: black;
+  padding: 1rem;
   background-color: hsl(300, 100%, 93%);
   border: 1px dotted hsl(280, 100%, 70%);
 }
@@ -24,12 +25,14 @@ header, footer {
 
 .sidebar {
   flex: 0 0 100px; /* Fixed width for sidebars */
+  padding: 1rem;
   background-color: hsl(200, 100%, 90%);
   border: 1px dotted hsl(200, 100%, 80%);
 }
 
 main {
   flex: 1; /* Flexible area that takes up the remaining space */
+  padding: 1rem;
   background-color: hsl(113, 85%, 95%);
   border: 1px dotted hsl(84, 71%, 53%);
 }
